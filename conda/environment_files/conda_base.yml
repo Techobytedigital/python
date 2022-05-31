@@ -1,0 +1,16 @@
+name: base
+channels:
+  # Add conda-forge for pkgs not in defaults repo
+  - conda-forge
+  - defaults
+dependencies:
+  # Python version for the environment
+  - python=3.9
+  # Use poetry to manage project dependencies
+  - poetry
+  # Use $>mamba anywhere you'd use $>conda for faster operations
+    # i.e. $>mamba add numpy - installs numpy with mamba
+  - mamba
+  # (optional): Add Python black formatter to Conda environment
+    # for really easy, helpful linting
+  - black
